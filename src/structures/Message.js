@@ -620,7 +620,7 @@ class Message extends Base {
     );
   }
   
-  inlineReply(content, options) {
+  async inlineReply(content, options) {
             const mentionRepliedUser = typeof ((options || content || {}).allowedMentions || {}).repliedUser === 'undefined' ? true : ((options || content).allowedMentions).repliedUser;
             delete ((options || content || {}).allowedMentions || {}).repliedUser;
 
